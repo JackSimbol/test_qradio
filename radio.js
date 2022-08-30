@@ -10,7 +10,9 @@ function check_radio(tid, sid){ //选择单选题某一选项时触发
         iid = document.getElementById(id).getAttribute("in_id");
         if(iid !== sid){
             document.getElementById(iid).getAttribute("checked") = true;
-
+        }
+    }
+}
 /*
  * 选择题文本示例：
  * "id=abc,type=radio,body=[Who is the most beautiful woman?],options=[A.Queen][B.Snowwhite],checked=abc_a"
@@ -34,14 +36,17 @@ function unparse_radio(tid){ //将单选题结果处理成文本
 }
 
 document.getElementById("a_in").onclick = function(){
-            check_radio("a_in", "test_radio");
+    check_radio("a_in", "test_radio");
 }
+
 document.getElementById("b_in").onclick = function(){
-            check_radio("b_in", "test_radio");
+    check_radio("b_in", "test_radio");
 }
+
 document.getElementById("c_in").onclick = function(){
-            check_radio("c_in", "test_radio");
+    check_radio("c_in", "test_radio");
 }
+
 document.getElementById("unparse").onclick = function(){
-            console.log(unparse_radio("test_radio"));
+    console.log(unparse_radio("test_radio"));
 }
