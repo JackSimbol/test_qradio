@@ -45,5 +45,3 @@ document.getElementById("c_in").onclick = function(){
 document.getElementById("unparse").onclick = function(){
             console.log(unparse_radio("test_radio"));
         }
-    
-
