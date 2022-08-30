@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr id="test_radio" idlist="test_radio_a,test_radio_b,test_radio_c" qtype="radio">
+                This is a test. When should you order KFC?
+            </tr>
+            <tr id="test_radio_a" in_id="a_in" ob_id="a_ob">
+                <input type="radio" id="a_in">
+                <div style="float:right" id="a_ob">A.Wednesday</div>
+            </tr>
+            <tr id="test_radio_b" in_id="b_in" ob_id="b_ob">
+                <input type="radio" id="b_in">
+                <div style="float:right" id="b_ob">B.Thursday</div>
+            </tr>
+            <tr id="test_radio_c" in_id="c_in" ob_id="c_ob">
+                <input type="radio" id="c_in">
+                <div style="float:right" id="c_ob">C.Every day</div>
+            </tr>
+            <tr>
+                <button id="unparse">unparse</button>
+        </tbody>
+    </table>
+    <script src="radio.js">
+        document.getElementById("a_in").onclick = function(){
+            check_radio("a_in", "test_radio");
+        }
+        document.getElementById("b_in").onclick = function(){
+            check_radio("b_in", "test_radio");
+        }
+        document.getElementById("c_in").onclick = function(){
+            check_radio("c_in", "test_radio");
+        }
+        document.getElementById("unparse").onclick = function(){
+            console.log(unparse_radio("test_radio"));
+        }
+    </script>
+</body>
