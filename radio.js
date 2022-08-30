@@ -14,7 +14,7 @@ function check_radio(sid, tid){ //选择单选题某一选项时触发
     for(var id of oid){
         iid = document.getElementById(id).getAttribute("in_id");
         if(iid !== sid){
-            document.getElementById(iid).checked = true;
+            document.getElementById(iid).checked = false;
         }
     }
 }
