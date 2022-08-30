@@ -34,7 +34,7 @@ function unparse_radio(tid){ //将单选题结果处理成文本
         var ob_id = document.getElementById(id).getAttribute("ob_id");
         opt_body += "["+document.getElementById(ob_id).innerHTML + "]";
         if(document.getElementById(in_id).checked == true){
-            checked = id;
+            checked = "checked="+id;
         }
     }
     return opt_body+","+checked;
