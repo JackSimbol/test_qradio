@@ -36,15 +36,15 @@ function unparse_radio(tid){ //将单选题结果处理成文本
     return opt_body+","+checked;
 }
 
-document.getElementById("a_in").change(function(){
+document.getElementById("a_in").onclick = function(){
             check_radio("a_in", "test_radio");
-        })
-document.getElementById("b_in").change(function(){
+        }
+document.getElementById("b_in").onclick = function(){
             check_radio("b_in", "test_radio");
-        })
-document.getElementById("c_in").change(function(){
+        }
+document.getElementById("c_in").onclick = function(){
             check_radio("c_in", "test_radio");
-        })
+        }
 document.getElementById("unparse").onclick = function(){
             console.log(unparse_radio("test_radio"));
         }
