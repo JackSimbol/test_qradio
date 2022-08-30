@@ -3,6 +3,11 @@
  * oid：选项id(sid)的序列
  * sid: 单个选项id(响应选择的radio)
  */
+
+function get_id(idlist){ //由idlist转到slider-id构成的数组
+    return idlist.split(',');
+}
+
 function check_radio(tid, sid){ //选择单选题某一选项时触发
     document.getElementById(sid).checked = true;
     var oid = get_id(document.getElementById(tid).getAttribute("idlist"));
